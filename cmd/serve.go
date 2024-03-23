@@ -31,7 +31,7 @@ func newServeHandler(key string) func(http.ResponseWriter, *http.Request) {
 			return
 		}
 		d := keyboard.NewDevice("/dev/hidg0")
-		args := []string{"scrolllock", "scrolllock", newInput}
+		args := []string{"scrolllock", "scrolllock", newInput, "enter"}
 		for _, x := range args {
 			err := d.SendString(x)
 			if err != nil {
