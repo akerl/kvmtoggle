@@ -11,7 +11,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var inputMatch = regexp.MustCompile("^[123]$")
+var inputMatch = regexp.MustCompile("^[1234]$")
 
 func newServeHandler(key string) func(http.ResponseWriter, *http.Request) {
 	return func(w http.ResponseWriter, req *http.Request) {
